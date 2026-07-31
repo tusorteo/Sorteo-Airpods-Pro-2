@@ -1,20 +1,45 @@
+const url = "https://script.google.com/macros/s/AKfycbypo2Pb2d6g6p_ZJNbXYKJpnIkvAc7eR9ZyYycKk5o3RTG0ycfDsuQJkfZgzjIn5zuocQ/exec";
+
+
 function comprobar(){
 
     let numero = document.getElementById("numero").value;
 
-    let ganador = "12345"; // aquí pondremos el número ganador
-
     let resultado = document.getElementById("resultado");
 
 
-    if(numero === ganador){
+    fetch(url + "?numero=" + numero)
 
-        resultado.innerHTML = 
-        "🎉 ¡ENHORABUENA! Has ganado el sorteo.";
+    .then(respuesta => respuesta.text())
 
-    } else {
+    .then(datos => {
 
-        resultado.innerHTML =
+
+        if(datos == "GANADOR"){
+
+            resultado.innerHTML =
+            "🎉 ¡ENHORABUENA! Has ganado el sorteo.";
+
+        }
+
+        else if(datos == "NO"){
+
+            resultado.innerHTML =
+            "❌ Lo sentimos, tu boleto no tiene premio.";
+
+        }
+
+        else{
+
+            resultado.innerHTML =
+            "⚠️ Ese número no existe.";
+
+        }
+
+
+    });
+
+}
         "❌ Lo sentimos, tu boleto no ha sido premiado.";
 
     }
