@@ -2,54 +2,123 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sorteo AirPods Pro 2</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>Sorteo AirPods Pro 2</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
 <div class="contenedor">
 
-    <h1>🎉 Sorteo AirPods Pro 2 🎉</h1>
 
-    <p>Introduce el número de tu boleto:</p>
+<div class="cabecera">
 
-    <input id="numero" type="number" placeholder="Número de boleto">
+<h1>🎧 Sorteo AirPods Pro 2</h1>
 
-    <button onclick="comprobar()">
-        Comprobar boleto
-    </button>
+<p>Participa y consigue unos AirPods Pro 2 nuevos</p>
 
-
-    <div id="resultado"></div>
+</div>
 
 
-    <!-- FORMULARIO DEL GANADOR -->
-<div id="formulario" style="display:none;">
 
-        <h2>🎁 Datos del ganador</h2>
+<div class="premio">
 
-        <input id="nombre" type="text" placeholder="Nombre">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/AirPods_Pro_2nd_generation.jpg"
+alt="AirPods Pro 2">
 
-        <input id="telefono" type="tel" placeholder="Teléfono">
 
-        <input id="direccion" type="text" placeholder="Dirección">
+<h2>🎁 Premio</h2>
 
-        <button onclick="enviarDatos()">
-            Enviar datos
-        </button>
+<p>
+AirPods Pro 2
+</p>
 
-    </div>
+</div>
+
+
+
+
+<h2>🎟️ Números del sorteo</h2>
+
+<p>200 números disponibles</p>
+
+
+<div id="numeros" class="numeros"></div>
+
+
+
+
+<div class="comprobar">
+
+
+<h2>🔎 Comprobar boleto</h2>
+
+
+<input 
+id="numero"
+type="number"
+placeholder="Número de boleto">
+
+
+<button onclick="comprobar()">
+Comprobar
+</button>
+
+
+<div id="resultado"></div>
 
 
 </div>
 
 
+
+
+
+<div id="formulario" style="display:none;">
+
+
+<h2>🏆 Datos del ganador</h2>
+
+
+<input 
+id="nombre"
+placeholder="Nombre">
+
+
+<input 
+id="telefono"
+placeholder="Teléfono">
+
+
+<input 
+id="direccion"
+placeholder="Dirección">
+
+
+<button onclick="enviarDatos()">
+Enviar datos
+</button>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
 <script src="script.js"></script>
+
 
 </body>
 
