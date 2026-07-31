@@ -8,10 +8,13 @@ function comprobar() {
     let formulario = document.getElementById("formulario");
 
 
-    if (numero === "") {
-        resultado.innerHTML = "⚠️ Escribe tu número de boleto.";
-        return;
-    }
+   if (datos === "GANADOR") {
+
+    resultado.innerHTML = "🎉 ¡HAS GANADO EL SORTEO!";
+
+    document.getElementById("formulario").style.display = "block";
+
+}
 
 
     resultado.innerHTML = "🔎 Comprobando...";
