@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.contenedor {
+    max-width: 500px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+h1 {
+    color: #222;
+}
+
+input {
+    padding: 12px;
+    font-size: 18px;
+    width: 200px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#resultado {
+    margin-top: 25px;
+    font-size: 20px;
+}
