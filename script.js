@@ -21,17 +21,19 @@ function comprobar() {
             if (datos === "GANADOR") {
 
                 resultado.innerHTML = `
-                🎉 ¡ENHORABUENA! 🎉<br>
-                Tu boleto es el ganador.<br><br>
-                Ponte en contacto con nosotros para recibir tu premio.
+                🎉 ¡ENHORABUENA! 🎉<br><br>
+                Tu boleto es el ganador.<br>
+                Rellena tus datos para recibir el premio.
                 `;
 
-            } else if (datos === "NO") {
+            } 
+            else if (datos === "NO") {
 
                 resultado.innerHTML =
                 "❌ Lo sentimos, tu boleto no tiene premio.";
 
-            } else {
+            } 
+            else {
 
                 resultado.innerHTML =
                 "⚠️ Ese número de boleto no existe.";
@@ -42,7 +44,7 @@ function comprobar() {
         .catch(error => {
 
             resultado.innerHTML =
-            "❌ Error al conectar con el sorteo.";
+            "❌ Error de conexión.";
 
             console.log(error);
 
