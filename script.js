@@ -8,7 +8,7 @@ function comprobar() {
     let formulario = document.getElementById("formulario");
 
 
-   if (datos === "GANADOR") {
+if (datos === "GANADOR") {
 
     resultado.innerHTML = "🎉 ¡HAS GANADO EL SORTEO!";
 
