@@ -7,18 +7,16 @@ function comprobar() {
     let resultado = document.getElementById("resultado");
     let formulario = document.getElementById("formulario");
 
+    // Ocultar formulario al empezar
+    formulario.style.display = "none";
 
-if (datos === "GANADOR") {
-
-    resultado.innerHTML = "🎉 ¡HAS GANADO EL SORTEO!";
-
-    document.getElementById("formulario").style.display = "block";
-
-}
+    if (numero === "") {
+        resultado.innerHTML = "⚠️ Escribe tu número de boleto.";
+        return;
+    }
 
 
     resultado.innerHTML = "🔎 Comprobando...";
-    formulario.style.display = "none";
 
 
     fetch(url + "?numero=" + numero)
@@ -32,7 +30,9 @@ if (datos === "GANADOR") {
 
         if (datos === "GANADOR") {
 
-            resultado.innerHTML = "🎉 ¡HAS GANADO EL SORTEO!";
+            resultado.innerHTML = `
+            🎉 ¡HAS GANADO EL SORTEO! 🎉
+            `;
 
             formulario.style.display = "block";
 
@@ -41,29 +41,34 @@ if (datos === "GANADOR") {
 
         else if (datos === "NO") {
 
-            resultado.innerHTML = "❌ Lo sentimos, tu boleto no tiene premio.";
+            resultado.innerHTML =
+            "❌ Lo sentimos, tu boleto no tiene premio.";
+
+            formulario.style.display = "none";
 
         }
 
 
         else {
 
-            resultado.innerHTML = "⚠️ Ese número no existe.";
+            resultado.innerHTML =
+            "⚠️ Ese número no existe.";
+
+            formulario.style.display = "none";
 
         }
 
 
     })
 
-
     .catch(error => {
 
-        resultado.innerHTML = "❌ Error de conexión.";
+        resultado.innerHTML =
+        "❌ Error de conexión.";
 
         console.log(error);
 
     });
-
 
 }
 
@@ -76,9 +81,9 @@ function enviarDatos() {
     let direccion = document.getElementById("direccion").value;
 
 
-    if(nombre === "" || telefono === "") {
+    if (nombre === "" || telefono === "") {
 
-        alert("Completa los datos obligatorios.");
+        alert("Rellena nombre y teléfono.");
 
         return;
 
@@ -86,10 +91,9 @@ function enviarDatos() {
 
 
     alert(
-        "Datos guardados:\n\n" +
+        "Datos enviados correctamente.\n\n" +
         "Nombre: " + nombre + "\n" +
-        "Teléfono: " + telefono + "\n" +
-        "Dirección: " + direccion
+        "Teléfono: " + telefono
     );
 
 }
