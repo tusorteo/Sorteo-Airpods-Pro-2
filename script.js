@@ -1,4 +1,4 @@
-const url = "https://script.google.com/macros/s/AKfycbypo2Pb2d6g6p_ZJNbXYKJpnIkvAc7eR9ZyYycKk5o3RTG0ycfDsuQJkfZgzjIn5zuocQ/exec";
+const url = "https://script.google.com/macros/s/AKfycbzsRglhPVyp_DJ7oWEcnL3XrrIupKV9pn4d7GxtC9obVKkJtizFJiMY3GIBa6tR-C50fw/exec";
 
 
 function comprobar() {
